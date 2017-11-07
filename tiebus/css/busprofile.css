@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+a{text-decoration: none;}
+
+
+li{
+	list-style: none;
+}
+
+.header{
+	font-size: 17px;
+	padding:15px 40px;
+	border:1px solid #eee;
+}
+
+.container{
+	width: 70%;
+	margin-left: 40px;
+	border:1px solid #eee;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 20px;
+}
+
+.min-info{
+	margin-left: 42px;
+	margin-top: 30px;
+	font-size: 13px;
+	padding-bottom: 2px;
+	cursor: pointer;
+}
+
+.form{
+	text-align: center;
+	width: 95%;
+	margin:5px auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.form-header{
+	width: 90%;
+	margin:10px auto;
+	font-weight: bold;
+}
+
+.form table,.form table tr ,.form table tr td{
+	border:1px solid #1abc9c;
+	border-collapse: collapse;
+}
+
+.form table tr td:last-child{
+	border-left: none;
+}
+
+.form input[type='text'],.form input[type='date']{
+	width: 90%;
+	border:none;
+	padding:13px 0px;
+	background:#fff;
+}
+
+.form input[type='checkbox']{
+	display: none;
+}
+
+.form input[type='submit']{
+	padding:13px;
+	width: 100%;
+	border:none;
+	color:#fff;
+	background:#1abc9c;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.form input[type='submit']:hover{
+	background:#16a085;
+}
+
+
+.contents{
+	width: 95%;
+	margin:5px auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.maincontents{
+	margin-top: 50px;
+	line-height: 2;
+}
+
+.popuralroutes{
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.routes{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contact-info{
+
+}
+
+.routesheader{
+	font-weight: bold;
+	margin-top: 50px;
+	margin-bottom: 3px;
+
+}
+
+.routesheader ul li{
+	font-weight: normal;
+}
+
+.routes table,.routes table tr,.routes table tr td{
+	border: 1px solid #16a085;
+	border-collapse: collapse;
+	border-top: none;
+	border-left: none;
+	font-family: 'Open Sans', sans-serif;
+	border-right: none;
+}
+
+.routes table tr td{
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+.select{
+	background: linear-gradient(#1abc9c,#16a085);
+	text-align: center;
+	color:#fff;
+	padding-top: 4px;
+	padding-bottom: 6px;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.select:hover{
+	background:#1abc9c;
+}
+
+
+.image{
+	width: 100%;
+	height: 400px;
+	background: #34495e;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.image img{
+	width: 100%;
+	height: 100%;
+}
+
+.imageheading{
+	margin-top: 30px;
+	font-size: 15px;
+}
+
+@media only screen and (max-width: 768px){
+	.container{
+	width: 100%;
+	margin:0px auto;
+}
+
+.header{
+	font-size: 17px;
+	padding:15px 0px;
+	border:1px solid #eee;
+	text-align: center;
+}
+
+.routes table td{
+	width: 30%;
+}
+
+
+.routes table td:last-child{
+	width: 20%;
+}
+
+
+
+}

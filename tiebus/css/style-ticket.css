@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+	padding:0px;
+	margin: 0px;
+}
+
+body{
+	font-family: 'sans-serif',arial,monospace;
+	background: #eee;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+
+.ticket-header{
+	height: 50vh;
+	background: linear-gradient(
+      rgba(10, 10, 10, 0.6), 
+      rgba(10, 10, 10, 0.6)
+    ),url(../image/bus.jpg) no-repeat center;
+	background-size: cover;
+}
+
+
+.ticket-form{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.ticket-form-header{
+	color:#fff;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+.ticket-form ul li{
+	display: inline-block;
+}
+
+.ticket-form ul li input[type='phone']{
+	width: 50vw;
+	border:none;
+	padding:15px;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.ticket-form ul li input[type='submit']{
+	border:none;
+	padding:13px 15px;
+	border-radius: 3px;
+	background:#27ae60;
+	color:#fff;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.ticket-form ul li input[type='submit']:hover{
+	background: #2ecc71;
+}
+
+
+#ticket-results{
+	background: #fff;
+	height: 50vh;
+	overflow: auto;
+}
+
+#ticket-results img{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px){
+	.ticket-form-header{
+	color:#fff;
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+
+
+.ticket-form ul li input[type='phone']{
+	padding:10px;
+}
+
+.ticket-form ul li input[type='submit']{
+	padding:10px 15px;
+}
+
+
+}
+
+
+@media only screen and (max-width: 280px){
+	.ticket-form-header{
+	color:#fff;
+	font-size: 15px;
+	padding-bottom: 20px;
+}
+}
