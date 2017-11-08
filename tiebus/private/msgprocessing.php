@@ -1,20 +1,20 @@
 <?php  include('session.php');?>
 <?php 
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$name = $_POST['username'];
+$msg = $_POST['msg'];
 
-$username = trim($username);
-$password = trim($password);
+$name = trim($name);
+$msg = trim($msg);
 
 
-$username = mysqli_real_escape_string($conn,$username);
-$password = mysqli_real_escape_string($conn,$password);
+$name = mysqli_real_escape_string($conn,$name);
+$msg = mysqli_real_escape_string($conn,$msg);
 
-$username = htmlentities($username);
-$password = htmlentities($password);
+$name = htmlentities($name);
+$msg = htmlentities($msg);
 
-$sql = "INSERT INTO `lg_info` (`ID`, `uname`, `password`, `user_type`, `Active`) VALUES (NULL, '$username', '$password', 'Normal', '0')";
+$sql = "INSERT INTO `sms` (`ID`, `name`, `message`, `time`) VALUES (NULL, '$name', '$msg', CURRENT_TIMESTAMP)";
 
 $result = mysqli_query($conn,$sql);
 

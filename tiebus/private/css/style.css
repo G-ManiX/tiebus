@@ -75,7 +75,7 @@ ul li{
 	position: absolute;
 	right: 0px;
 	width: 82%;
-	overflow: auto;
+	overflow: hidden;
 
 }
 
@@ -348,7 +348,7 @@ nav table tr td:hover{
 
 
 .massage_main{
-	height: 87%;
+	height: 86%;
 	overflow: auto;
 	padding:3px 10px;
 }
@@ -372,8 +372,13 @@ nav table tr td:hover{
 	word-wrap: break-word;
 }
 
+.controltext input[type='checkbox']{
+	display: none;
+}
+
 .msgcontainer{
-	background: #ddd;
+	background: #fff;
+	border:1px solid #eee;
 	width: 80%;
 	margin:10px auto;
 }
@@ -400,3 +405,4 @@ nav table tr td:hover{
 	color:#777 !important;
 	cursor: pointer;
 }
+

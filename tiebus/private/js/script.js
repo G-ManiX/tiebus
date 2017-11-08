@@ -47,7 +47,4 @@ $(document).ready(function(){
 	}
 	});
 
-	function send(){
-		alert(23678);
-	}
 });

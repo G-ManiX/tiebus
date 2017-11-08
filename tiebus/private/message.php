@@ -11,10 +11,10 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="../image/favicon/favicon-16x16.png">
 	<link rel="manifest" href="../image/favicon/manifest.json">
 	<link rel="mask-icon" href="../image/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/autoscroll.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -37,18 +37,19 @@
 						</div>
 					</td>
 					<td id="main">
-						<div class="massage_main">
-							<div class="msgcontainer">
-							<div class="msgheader">Mtuyajr <span>time</span></div>
-								<div class="textmsg">Hellow</div>
-							</div>
+						<div class="massage_main" id="mainx">
+							<ul id="list">
+								
+							</ul>
 						</div>
 							<div class="controltext">
-							<form autocomplete="off" onsubmit="send();">
+							<form autocomplete="off" id="sendForm">
 								<table width="100%">
 									<tr>
 										<td width="10%"><i class="fa fa-smile-o" aria-hidden="true"></i></td>
-										<td width="80%"><input type="text" name="msg" id="msg" placeholder="Message..." ></td>
+										<td width="80%"><input type="text" name="msg" id="msg" placeholder="Message..." >
+										<input type="checkbox" name="username" id="username" value="<?php echo $login_session;?>" checked>
+										</td>
 										<td width="10%"><i class="fa fa-microphone" aria-hidden="true"></i></td>
 									</tr>
 								</table>
@@ -59,10 +60,6 @@
 			</table>
 		</div>
 	</div><!--end of the desktop version-->
-<script type="text/javascript">
-	function send(e){
-		e.preventDefault();
-	}
-</script>
+	<script type="text/javascript" src="js/message.js"></script>
 </body>
 </html>
