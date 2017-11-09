@@ -190,7 +190,59 @@ div table tr{
 	padding-top: 10px;
 }
 
+.pricetag{
+	width: 90%;
+	margin:10px auto;
+}
 
+.pricetag input[type='text']{
+	text-align: center;
+	border:1px solid blue;
+	background: #fff;
+	font-size: 17px;
+	color:darkblue;
+	padding:10px 5px;
+}
+
+.importantInfo{
+	width: 90%;
+	margin:5px auto;
+}
+
+.importantInfo table,.importantInfo table tr,.importantInfo table,.importantInfo table tr td{
+	border:none;
+}
+
+
+.importantInfo input[type='text'],.importantInfo input[type='phone']{
+	background: #fff;
+	border:1px solid #ddd;
+	width: 90%;
+	font-size: 16px;
+	padding:10px 5px;
+}
+
+.importantInfo input[type='text']:focus,.importantInfo input[type='phone']:focus{
+	border:1px solid blue;
+}
+
+
+.submitbtn{
+	text-align: center;
+}
+
+.importantInfo input[type='submit']{
+	border:none;
+	font-size: 16px;
+	background: linear-gradient(#eee,#ddd);
+	padding:7px 20px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.importantInfo input[type='submit']:hover{
+	background: #eee;
+}
 
 
 

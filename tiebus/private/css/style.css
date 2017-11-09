@@ -75,7 +75,7 @@ ul li{
 	position: absolute;
 	right: 0px;
 	width: 82%;
-	overflow: hidden;
+	overflow: auto;
 
 }
 

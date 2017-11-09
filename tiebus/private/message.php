@@ -23,7 +23,7 @@
 			<table width="100%">
 				<tr>
 					<td id="navigation">
-						<div class="navigation-header">TIE</div>
+						<div class="navigation-header">TIE </div>
 						<div class="nav-contents">
 							<ul>
 								<a href="index.php"><li><i class="fa fa-sign-in" aria-hidden="true"></i> &nbsp Requests</li></a>

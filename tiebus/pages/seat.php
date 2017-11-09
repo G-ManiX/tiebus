@@ -5,10 +5,10 @@
 	$to = $_GET['to'];
 	$date = $_GET['date'];
 	$busname = $_GET['busname'];
-
-	$query = "SELECT * FROM `bus_info` WHERE bFrom LIKE '%$from%' and bTo LIKE '%$to%'";
-  	$resultbus = mysqli_query($conn, $query) or die(mysqli_error($conn));
-  	$count = mysqli_num_rows($resultbus);
+	$price = $_GET['price'];
+	if (!$from || !$to ||!$date ||!$busname ||!$price) {
+		header("location: ../index.php");
+	}
 
 ?>
 <!DOCTYPE html>
@@ -40,20 +40,38 @@
 		</header>
 	</div>
 <section>
-	<!--
+
 	<div class="divcontainer">
 		<div class="div1">
 			<div class="divheader"> Payment information </div>
+			<div class="pricetag">
+				<label>Fee:</label>
+				<input type="text" name="pricetag" placeholder="0 Tsh" value="<?php echo $price ;?>" disabled>
+			</div>
 			<div class="route-info"><?php echo $from ;?> - <?php echo $to ;?> <br> </div>
 		</div>
 		<div class="div2">
 			<div class="divheader">Booking information</div>
+			<div class="importantInfo">
+				<form autocomplete="off">
+					<table width="100%">
+						<tr>
+							<td width="20%">Full Name:</td>
+							<td><input type="text" name="fullname" placeholder="Your Name"></td>
+						</tr>
+						<tr>
+							<td>Phone:</td>
+							<td><input type="phone" name="phone" placeholder="Your Phone"></td>
+						</tr>
+					</table>
+					<div class="submitbtn"><input type="submit" value="submit" name="submitall" id="submitall"></div>
+				</form>
+			</div>
 		</div>
 		<div class="div3">
 			<div class="divheader">Bus map</div>
 		</div>
 	</div>
--->This page is under constraction
 </section>
 </body>
 </html>
