@@ -87,11 +87,11 @@ if (isset($_GET['bn'])) {
 								</table>
 							</div>
 							<div class="routesheader">
-								<div class="contactheader">Contacts information</div>
+								<div class="contactheader"></div>
 								<?php echo $fetch['contacts'];?>
 							</div>
 						</div>
-					<div class="imageheading">Image gallery</div>
+					<!--<div class="imageheading">Image gallery</div>
 					<div class="image">
 						<img src="../image/profileimg/bus1.jpg">
 						<img src="../image/profileimg/bus2.jpg">
@@ -100,7 +100,7 @@ if (isset($_GET['bn'])) {
 						<img src="../image/profileimg/bus5.jpg">
 						<img src="../image/profileimg/bus6.jpg">
 						<img src="../image/profileimg/bus7.jpg">
-					</div>
+					</div>-->
 					</div>
 				</div>
 			</div>

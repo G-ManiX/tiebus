@@ -111,9 +111,10 @@ li{
 }
 
 .routesheader{
-	font-weight: bold;
 	margin-top: 50px;
 	margin-bottom: 3px;
+	font-family: 'Open Sans', sans-serif;
+
 
 }
 
