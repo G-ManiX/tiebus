@@ -438,4 +438,18 @@ div.vision .right-block-b:after {
 		text-decoration: none;
 		color: #eee;
 	}
+
+
+	/******
+	these style changes the margin on mobile devices
+	******/
+	
+	div.mission-bd {
+	margin-left: 30px !important;
+	}
+
+	div.vision-bd{
+	margin-left: 10px !important;
+	}
+
 }
