@@ -137,7 +137,7 @@
 												</tr>
 													<?php while($user = mysqli_fetch_assoc($users)):?>
 														<tr>
-														<td><?php echo $user['ID']; ?></td>
+														<td class="userid"><?php echo $user['ID']; ?></td>
 														<td class="left"><?php echo $user['uname']; ?></td>
 														<td><?php echo $user['user_type']; ?></td>
 														<td><span class="deluser"><i class="fa fa-trash-o" aria-hidden="true"></i></span></td>

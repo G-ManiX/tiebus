@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
 *{
 	padding:0px;
@@ -22,6 +24,7 @@ body{
 	background: #eee;
 	border-bottom: 1px solid #ddd;
 	text-align: center;
+	display: none;
 }
 
 .header ul li{
@@ -244,7 +247,184 @@ div table tr{
 	background: #eee;
 }
 
+.toggleModify{
+	font-family: 'Lato', sans-serif;
+	background: #333;
+	color:#fff;
+	text-align: center;
+	padding: 13px 0px;
+	cursor: pointer;
+	border-bottom: 1px solid #ddd;
+}
 
+.toggleModify a{
+	color:#fff;
+}
+
+#home{
+	float: right;
+	padding-right: 20px;
+}
+
+#home:hover{
+	transform: scale(1.2);
+}
+
+.forminformation{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.forminformation form input[type='text'],.forminformation form input[type='phone'],.forminformation form input[type='email']{
+	background: #fff;
+	border:1px solid #95a5a6;
+	padding:13px 7px;
+	font-size: 18px;
+	color:#333;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 20px;
+	width: 50%;
+}
+
+.forminformation form input[type='text']:focus,.forminformation form input[type='phone']:focus,.forminformation form input[type='email']:focus{
+	border:1px solid #2980b9;
+}
+
+.forminformation  select{
+	width: 51%;
+	padding:15px 5px;
+	font-size: 20px;
+	background: #eee;
+	cursor: pointer;
+	border:1px solid #95a5a6;
+}
+
+.bookingfor{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+
+.proceedbtn{
+	transition: .35s ease-out;
+	background: #16a085;
+	color: #fff;
+	font-size: 17px;
+	padding:15px 0px;
+	width: 30%;
+	margin:30px auto;
+	cursor: pointer;
+}
+
+
+.proceedbtn:hover{
+	transition: .35s ease-in;
+	background: #1abc9c;
+}
+
+.confirmBox{
+	background: #eee;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 90vh;
+	border-bottom: 2px solid #16a055;
+	display: none;
+	overflow: auto;
+	user-select: none;
+}
+
+.closeConfirm{
+	margin-top: 20px;
+	width: 20%;
+	color:#fff;
+	padding:13px 0px;
+	background:linear-gradient(#e74c3c,#c0392b);
+	cursor: pointer;
+	border-radius: 3px;
+	margin:15px auto 20px auto;
+	user-select: none;
+}
+
+.closeConfirm:hover{
+	background: #e74c3c;
+}
+
+.contentconfirmbox{
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#contentconfirmT{
+	margin:0px auto;
+	width: 60%;
+	user-select: none;
+}
+
+#contentconfirmT table,#contentconfirmT table tr,#contentconfirmT table tr td{
+	border:1px solid #ddd;
+	border-collapse: collapse;
+	border-radius: 3px;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 17px;
+	user-select: none;
+}
+
+
+.btnsbmit input[type='submit']{
+	background: linear-gradient(#1abc9c,#16a085);
+	padding:13px 0px;
+	width: 20%;
+	cursor: pointer;
+	border-radius: 3px;
+	color:#fff;
+	font-size: 16px;
+	margin-top: 20px;
+	border:none;
+	margin-bottom: 10px;
+	user-select: none;
+}
+
+.btnsbmit input[type='submit']:hover{
+	background: #1abc9c;
+}
+
+
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: none;
+}
+
+.green{
+	color:green;
+}
+
+.imageholder{
+	display: none;
+}
+
+.sucessfull{
+	font-size: 19px;
+	font-family: 'monospace',arial;
+}
+
+.howtopay{
+	width: 35%;
+	padding:10px 0px;
+	text-align: center;
+	background: linear-gradient(#1abc9c,#16a085);
+	margin:15px auto;
+	font-family: arial;
+	font-size: 15px;
+	cursor: pointer;
+	color:#fff;
+}
 
 
 
@@ -285,6 +465,28 @@ div table tr{
 
 .divcontainer{
 	width: 100%;
+}
+
+.forminformation form input[type='text'],.forminformation form input[type='phone']{
+	padding:13px 5px;
+	font-size: 17px;
+	width: 80%;
+}
+
+.forminformation  select{
+
+}
+
+#contentconfirmT{
+	width: 99%;
+}
+
+.closeConfirm{
+	width: 50%;
+}
+
+.btnsbmit input[type='submit']{
+	width: 50%;
 }
 
 

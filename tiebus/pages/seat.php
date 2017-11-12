@@ -25,6 +25,9 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" type="text/css" href="../css/style-booking.css">
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/seatbooking.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -40,38 +43,76 @@
 		</header>
 	</div>
 <section>
+	<div class="toggleModify"><span class="animated infinite fadeInDown"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i></span> Modify Route <a href="../index.php"><span id="home"><i class="fa fa-home" aria-hidden="true"></i></span></a></div>
+</section>
+<section>
+	<div class="forminformation">
+		<form autocomplete="off">
+			<input type="text" name="name" placeholder="Your Name:" autofocus required><br>
+			<input type="phone" name="phoneNumber" placeholder="Phone number:" required><br>
+			<input type="email" name="email" placeholder="Email (Optional):" ><br>
+			<div class="bookingfor">Booking For</div>
+			<select name="bookingfor">
+				<option value = "1" selected>1 seat</option>
+				<option value = "2">2 seat</option>
+				<option value = "3">3 seat</option>
+				<option value = "4">4 seat</option>
+				<option value = "5">5 seat</option>
+			</select>
 
-	<div class="divcontainer">
-		<div class="div1">
-			<div class="divheader"> Payment information </div>
-			<div class="pricetag">
-				<label>Fee:</label>
-				<input type="text" name="pricetag" placeholder="0 Tsh" value="<?php echo $price ;?>" disabled>
-			</div>
-			<div class="route-info"><?php echo $from ;?> - <?php echo $to ;?> <br> </div>
-		</div>
-		<div class="div2">
-			<div class="divheader">Booking information</div>
-			<div class="importantInfo">
-				<form autocomplete="off">
+			<div class="proceedbtn">Proceed</div>
+
+			<div class="confirmBox">
+				<div id="tobehidden">
+				<div class="contentconfirmbox">
+					<div  id="contentconfirmT">
 					<table width="100%">
 						<tr>
-							<td width="20%">Full Name:</td>
-							<td><input type="text" name="fullname" placeholder="Your Name"></td>
+							<td width="50%">Bus name</td>
+							<td width="50%"><?php echo $busname;?></td>
 						</tr>
 						<tr>
-							<td>Phone:</td>
-							<td><input type="phone" name="phone" placeholder="Your Phone"></td>
+							<td>Route</td>
+							<td><?php echo $from;?> to <?php echo $to;?></td>
+						</tr>
+						<tr>
+							<td>Date</td>
+							<td><?php echo $date;?></td>
+						</tr>
+						<tr>
+							<td>Distance</td>
+							<td>Null</td>
+						</tr>
+						<tr>
+							<td>Fee</td>
+							<td><?php echo $price;?></td>
+						</tr>
+						<tr>
+							<td>Seats</td>
+							<td>null</td>
+						</tr>
+						<tr>
+							<td>Total Fee</td>
+							<td>null</td>
 						</tr>
 					</table>
-					<div class="submitbtn"><input type="submit" value="submit" name="submitall" id="submitall"></div>
-				</form>
+					</div>
+				</div>
+				<div class="btnsbmit"><input type="submit" name="submitThis" id="submitThis" value="Confirm"></div>
+				<div class="closeConfirm">Cancel</div>
 			</div>
-		</div>
-		<div class="div3">
-			<div class="divheader">Bus map</div>
-		</div>
+			<div class="loader">
+				<div class="imageholder"><img src="../images/bx_loader.gif"></div>
+				<div class="sucessfull">
+					<span class="green">Your Booking is successfull</span> !<br><br> Make payment to complete your request <br>
+					Your controll number is<br> <b>9495843663748</b>
+					<div class="howtopay">Pay with tigoPesa</div>
+				</div>
+			</div>
+			</div>
+		</form>
 	</div>
 </section>
+
 </body>
 </html>

@@ -39,7 +39,7 @@
 			<div id="close"><i class="fa fa-times" aria-hidden="true"></i></div>
 			<ul>
 				<a href="pages/tickets.php"><li>Tickets</li></a>
-				<a href="##"><li>About Us</li></a>
+				<a href="pages/about.php"><li>About Us</li></a>
 				<a href="##"><li>Contact Us</li></a>
 				<a href="pages/login.php"><li>Login</li></a>
 			</ul>

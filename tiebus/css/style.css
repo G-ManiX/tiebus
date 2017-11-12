@@ -164,6 +164,7 @@ li{
 .available_buses_contents ul li,.poputar-routes-contents ul li {
 	padding:10px 5px;
 	cursor: pointer;
+	font-family: 'Lato', sans-serif;
 
 }
 

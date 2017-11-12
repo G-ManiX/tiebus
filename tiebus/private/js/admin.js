@@ -77,3 +77,8 @@ $("#submitbus").click(function(event) {
        xhr.send(vars);
        event.preventDefault();
 });
+
+
+$(".deluser").click(function(){
+  alert("deleted!");
+});
