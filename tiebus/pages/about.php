@@ -16,14 +16,26 @@
 	<link rel="stylesheet" type="text/css" href="../css/style-about.css">
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/about.js"></script>
 </head>
 <body>
-	<script type="text/javascript" src="js/about.js"></script>
+	<script type="text/javascript" src="../js/about.js"></script>
 	<div class="top-container">
 		<nav>
 			<div class="navigation">
-				
+				<div class="navigation-menu">
+					<div class="desktop">
+						<div id="home"><i class="fa fa-home" aria-hidden="true"></i><a href="index.php"> Home</a></div>
+						<div id="ticket"><i class="fa fa-ticket" aria-hidden="true"></i><a href=""> Ticketing</a></div>
+						<div id="contact"><i class="fa fa-phone" aria-hidden="true"></i><a href=""> Contact Us</a></div>
+						<div id="login"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php"> Login</a></div>
+					</div>
+					<div class="mobile">
+						<div><i class="fa fa-home" aria-hidden="true"></i><a href="index.php"> Home</a></div>
+						<div><i class="fa fa-ticket" aria-hidden="true"></i><a href=""> Ticketing</a></div>
+						<div><i class="fa fa-phone" aria-hidden="true"></i><a href=""> Contact Us</a></div>
+						<div><i class="fa fa-sign-in" aria-hidden="true"></i><a href="login.php"> Login</a></div>
+					</div>
+				</div>
 			</div>
 		</nav>
 	</div>
@@ -33,9 +45,9 @@
 			<div class="title"><span><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</span></div>
 			<div class="scroll">
 				<ul id="chevy">
-					<li><span><i data-tag-status="tagged" class="fa fa-chevron-down fa-4x" aria-hidden="true"></i></span></li>
-					<li><span><i data-tag-status="untagged" class="fa fa-chevron-down fa-4x" aria-hidden="true"></i></span></li>
-					<li><span><i data-tag-status="untagged" class="fa fa-chevron-down fa-4x" aria-hidden="true"></i></span></li>
+					<li><span><i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></span></li>
+					<li><span><i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></span></li>
+					<li><span><i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></span></li>
 				</ul>
 			</div>
 		</div>
@@ -43,15 +55,6 @@
 			<div class="nav-icon-bar"></div>
 			<div class="nav-icon-bar"></div>
 			<div class="nav-icon-bar"></div>
-		</div>
-		<div class="navigation-menu">
-			<div class="desktop">
-				<div id="home"><i class="fa fa-home" aria-hidden="true"></i><a href="index.php"> Home</a></div>
-				<div id="ticket"><i class="fa fa-ticket" aria-hidden="true"><a href=""> Ticketing</a></i></div>
-				<div id="contact"><i class="fa fa-phone" aria-hidden="true"><a href=""> Contact Us</a></i></div>
-				<div id="login"><i class="fa fa-sign-in" aria-hidden="true"><a href="login.php"> Login</a></i></div>
-			</div>
-			<div class="mobile"></div>
 		</div>
 		</header>
 		<section>
@@ -96,28 +99,20 @@
 				msAnimator.isScroll(currentPos);
 				vsAnimator.isScroll(currentPos);
 			});
-		/*var chevy = document.getElementById("chevy"),
-			chevron = new Chevron(chevy,10000);
-			chevron.start();
-		*/
-		var home = document.getElementById("home"), ticket = document.getElementById("ticket"), contact = document.getElementById("contact"), login = document.getElementById("login");
+			
+		var home = document.getElementById("home"), 
+			ticket = document.getElementById("ticket"),
+			contact = document.getElementById("contact"), 
+			login = document.getElementById("login");
 		var arrayElem = [home,ticket,contact,login],
-			button = document.querySelector(".nav-icon");
+			button = document.querySelector(".nav-icon"),
+			mobile = document.querySelector(".mobile");
 			
 			Navigation.setElement(arrayElem);
 			button.addEventListener("click", toggleMenu);
-			
 
-			function toggleMenu(event) {
-				if(button.dataset.navToggle == "show") {
-					Navigation.getElement().forEach(Navigation.retrieveItem);
-					button.dataset.navToggle = "hide";
-					console.log(button.dataset.navToggle);
-					return;
-				}
-				Navigation.getElement().forEach(Navigation.hideItem);
-				button.dataset.navToggle = "show";
-				Navigation.getElement().forEach(Navigation.resetItemPos);
-			}
+		var chevy = $("#chevy span > i");
+			Chevron.animate(chevy);
+			
 	</script>
 </body>

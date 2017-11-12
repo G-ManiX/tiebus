@@ -52,8 +52,20 @@ li{
 .header > .scroll {
 	display: block;
 	position: relative;
-	left: 46%;
+	left: 47%;
 	top: 21em;
+}
+
+@media (max-height: 600px) {
+	.header > .scroll {
+		top: 15em;
+	}
+}
+
+@media (max-height: 400px) {
+	.header > .scroll {
+		top: 10em;
+	}	
 }
 
 .title span {
@@ -65,7 +77,7 @@ li{
 }
 
 div.scroll > ul li span i {
-	color: #fff;
+	color: #eee;
 	opacity: 0.3;
 }
 
@@ -87,8 +99,8 @@ div.scroll > ul li span i {
 	bottom: 0;
 	transition-property: left top;
 	transition-duration: 2.5s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
+	transition-timing-function: ease-in;
+	-webkit-transition-timing-function: ease-in;
 }
 
 #contact {
@@ -98,8 +110,8 @@ div.scroll > ul li span i {
 	bottom: 0;
 	transition-property: left top;
 	transition-duration: 2s;
-	transition-timing-function: linear;
-	-webkit-transition-timing-function: linear;
+	transition-timing-function: ease-in;
+	-webkit-transition-timing-function: ease-in;
 }
 
 #login {
@@ -262,14 +274,14 @@ div.vision .right-block-b:after {
 	left: -410px;
 	position: relative;
 	transition-property: left;
-	transition-duration: 0.5s;
+	transition-duration: 0.7s;
 }
 
 #visiontitle {
 	right: -410px;
 	position: relative;
 	transition-property: right;
-	transition-duration: 0.5s;
+	transition-duration: 0.7s;
 }
 
 .desktop {
@@ -295,6 +307,10 @@ div.vision .right-block-b:after {
 	color: #eee;
 	font-family: 'Lato',arial,sans-serif;
 }
+
+.mobile {
+	display: none;
+} 
 
 @media (max-width: 768px) {
 	*:before, *:after {
@@ -389,8 +405,37 @@ div.vision .right-block-b:after {
 		padding-right: 10px;
 		margin-top: 13px;
 	}
+}
 
+@media (max-width: 992px) {
 	.desktop {
 		display: none;
+	}
+
+	.mobile {
+		display: block;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+		top: -160px;
+		padding-top: 10px;
+		padding-left: 10px;
+	}
+
+	.mobile div {
+		display: block;
+		position: relative;
+		clear: both;
+		margin-top: 7px;
+		text-align: center;
+		left: -130px;
+		width: 7em;
+		transition: left 0.5s;
+		transition-timing-function: ease-in;
+	}
+
+	.mobile div a, .mobile div i {
+		text-decoration: none;
+		color: #eee;
 	}
 }

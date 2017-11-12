@@ -14,8 +14,6 @@ Animator.prototype = {
 		value: null
 	},
 	xPos : null,
-	currentPositionLeft: null,
-	currentPositionTop: null,
 	intDelay: {
 		value: null,
 		writable: true
@@ -72,7 +70,7 @@ Vision.prototype = Object.create(Animator.prototype, {
 // Constructor for the Vision Object
 Vision.prototype.constructor = Vision;
 
-/************************************************************************/
+/*********************************************************************/
 
 var Navigation = {
 	element: null,
@@ -87,12 +85,10 @@ var Navigation = {
 		arr[index].style.opacity = "1";
 		arr[index].style.left = initial;
 		arr[index].style.top = initial;
-		console.log(arr[index]);
 	},
 	hideItem: function(elem,index,arr) {
 		arr[index].style.left = "-1100px";
 		arr[index].style.top = "300px";
-		console.log(arr[index]);
 	},
 	resetItemPos: function(elem,index,arr) {
 		arr[index].style.opacity = "0";
@@ -100,60 +96,55 @@ var Navigation = {
 			arr[index].style.display = "";
 			arr[index].style.left = "";
 			arr[index].style.top = "";
-			console.log();
 		},2500,arr,index);
+	},
+	/* Mobile device Navigation menu methods */
+	extendNav: function(mobile) {
+		var arrOfDiv = mobile.children;
+		for (var i = 0; i < arrOfDiv.length; i++) {
+			arrOfDiv[i].style.left = "0";
+		}
+	},
+	retractNav: function(mobile) {
+		var arrOfDiv = mobile.children;
+		for (var i = 0; i < arrOfDiv.length; i++) {
+			arrOfDiv[i].style.left = "-130px";
+		}
 	}
 }
 
-/***************************************************************/
+/*********************************************************************/
 
-var Chevron = function(selector,intDelay) {
-	Animator.call(this,selector);
-	this.intDelay = intDelay;
-}
-
-Chevron.prototype = Object.create(Animator.prototype, {
-	status: {
-		value: null,
-		writable: true,
-		enumerable: true,
-		configurable: true,
-	},
-	bool: {
-		value: true,
-	},
-	start: {
-		value: function() {
-			//while(this.bool){
-				var target = this.elem.getElementsByTagName("i");
-				for (var i; i < target.length; i++) {
-					this.animate(target[i]);
-					console.log(target[i]);
-				}
-				//
-			//}
-		},
-		writable: true,
-		configurable: true
-	},
-	animate: {
-		value: function(element){
-			setTimeout(this.changeOpUp,5000,element);
-			setTimeout(this.changeOpDown,10000,element);
-		}
-	},
-	changeOpUp: {
-		value: function(i) {
-			i.style.opacity = "1";
-		}
-	},
-	changeOpDown: {
-		value: function(i) {
-			i.style.opacity = "0.3";
-		}
+var Chevron = {
+	animate: function(jqObj) {
+		setInterval(function() {
+			jqObj.each(function() {
+				jqObj.animate({
+					opacity: 0.9
+				},{
+					duration: 200,
+					step: function() {
+						jqObj.animate({
+							opacity: 0.3
+						},150)
+					}
+				})
+			})
+		},50)
 	}
-});
-
-Chevron.prototype.constructor = Chevron;
+}
 
 /**********************************************************************/
+
+function toggleMenu(event) {
+	if(button.dataset.navToggle == "show") {
+		Navigation.getElement().forEach(Navigation.retrieveItem);
+		Navigation.extendNav(mobile);
+		button.dataset.navToggle = "hide";
+		return;
+	}
+	Navigation.getElement().forEach(Navigation.hideItem);
+	Navigation.retractNav(mobile);
+	button.dataset.navToggle = "show";
+	Navigation.getElement().forEach(Navigation.resetItemPos);
+}
