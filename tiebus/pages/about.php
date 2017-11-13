@@ -24,13 +24,13 @@
 			<div class="navigation">
 				<div class="navigation-menu">
 					<div class="desktop">
-						<div id="home"><i class="fa fa-home" aria-hidden="true"></i><a href="./index.php"> Home</a></div>
+						<div id="home"><i class="fa fa-home" aria-hidden="true"></i><a href="../index.php"> Home</a></div>
 						<div id="ticket"><i class="fa fa-ticket" aria-hidden="true"></i><a href=""> Ticketing</a></div>
 						<div id="contact"><i class="fa fa-phone" aria-hidden="true"></i><a href=""> Contact Us</a></div>
 						<div id="login"><i class="fa fa-sign-in" aria-hidden="true"></i><a href=""> Login</a></div>
 					</div>
 					<div class="mobile">
-						<div><i class="fa fa-home" aria-hidden="true"></i><a href="./index.php"> Home</a></div>
+						<div><i class="fa fa-home" aria-hidden="true"></i><a href="../index.php"> Home</a></div>
 						<div><i class="fa fa-ticket" aria-hidden="true"></i><a href=""> Ticketing</a></div>
 						<div><i class="fa fa-phone" aria-hidden="true"></i><a href=""> Contact Us</a></div>
 						<div><i class="fa fa-sign-in" aria-hidden="true"></i><a href=""> Login</a></div>
